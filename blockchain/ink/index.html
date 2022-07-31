@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>ink! - ethansung</title>
+    
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><meta name="description" content="Blog Pages ink! "/><meta name="keywords" content="cryptocurrency, ink, solidity" />
+    <meta property="og:title" content="ethansung -&nbsp;ink!" />
+    <meta property="og:type" content="website"/><meta property="og:url" content="&#x2F;blockchain&#x2F;ink&#x2F;"/><meta property="og:description" content="Blog Pages"/>
+    <link rel="preload" href="/assets/fonts/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style.css?h=f8c7bc50801cb0dd9da65fd930c01ca7fb7efd801345957f21cba38c367faec8">
+    <link rel="stylesheet" href=" /color/orange.css?h=aee32970acd19d5cf88d42505796de4e31aa73fc58a07e61aa2f57fae305de50">
+    
+<link rel="alternate" type="application/atom+xml" title="ethansung RSS" href="/atom.xml"></head>
+    <body>
+        <div class="container center">
+<header class="header">
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="&#x2F;">
+    <div class="logo">
+        ethansung
+    </div>
+</a>
+        </div>
+        <div class="menu-trigger">menu</div>
+    </div>
+    
+    <nav class="menu">
+        <ul class="menu__inner menu__inner--desktop">
+            
+            
+                    <li>
+                        <a href="
+    
+        /about
+    
+">about</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        /contact
+    
+">contact</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        /tags
+    
+">tags</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        https:&#x2F;&#x2F;github.com&#x2F;ethan1sung
+    
+">github</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        https:&#x2F;&#x2F;leetcode.com&#x2F;ethansung&#x2F;
+    
+">leetcode</a>
+                    </li>
+                
+            </ul>
+
+        <ul class="menu__inner menu__inner--mobile">
+            
+        <li>
+            <a href="
+    
+        /about
+    
+">about</a>
+        </li>
+        <li>
+            <a href="
+    
+        /contact
+    
+">contact</a>
+        </li>
+        <li>
+            <a href="
+    
+        /tags
+    
+">tags</a>
+        </li>
+        <li>
+            <a href="
+    
+        https:&#x2F;&#x2F;github.com&#x2F;ethan1sung
+    
+">github</a>
+        </li>
+        <li>
+            <a href="
+    
+        https:&#x2F;&#x2F;leetcode.com&#x2F;ethansung&#x2F;
+    
+">leetcode</a>
+        </li>
+        </ul>
+    </nav>
+
+    </header>
+<div class="content"><article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="&#x2F;blockchain&#x2F;ink&#x2F;">ink!</a>
+            </h1>
+            
+    <div class="post-meta">
+        <span class="post-date">2022.0728
+                </span>
+
+        <span class="post-author"></span>
+
+        
+
+    
+   :
+    #<a href="/tags/cryptocurrency/">cryptocurrency</a>
+        
+    #<a href="/tags/ink/">ink</a>
+        
+    #<a href="/tags/solidity/">solidity</a>
+        
+    
+            
+        
+    </div>
+
+            
+    
+</header><p>Honestly, I am new to blockchain. From my point of view, Solidity language is shit, and  I don't know why Gravin Wood designed Solidity like that. Even if you are an experienced programmer, you need a lot of time to get familiar with Solidity. But it's easy to write contracts with <code>ink!</code> if you are a rust programmer.</p>
+<span id="continue-reading"></span><pre data-lang="solidity" class="language-solidity "><code class="language-solidity" data-lang="solidity">pragma solidity ^0.4.22;
+
+contract helloworld {
+    function helloworld() public pure returns (string) {
+        return &#x27;helloWorld&#x27;;
+    }
+}
+</code></pre>
+<p>I don't know why we put the <code>public</code> keyword at the back other than every other language does.</p>
+<h2 id="what-is-ink">What is <code>ink!</code><a class="zola-anchor" href="#what-is-ink" aria-label="Anchor link for: what-is-ink">§</a>
+</h2>
+<p><code>ink!</code> is a programming language invented by Parity for building blockchain contracts like Solidity does.</p>
+<h2 id="how-s-ink-work">How's <code>ink!</code> work?<a class="zola-anchor" href="#how-s-ink-work" aria-label="Anchor link for: how-s-ink-work">§</a>
+</h2>
+<p>As we know, contracts are on-chain logic, they cannot run on a standard OS, so we need a virtual machine to interpret the compiled code. So does <code>ink!</code>. The contracts written by <code>ink!</code> will be compiled into WASM. In substrate runtime, the pallet called <code>contracts</code> will run the WASM code.</p>
+<h2 id="ink-vs-solidity"><code>ink!</code> vs Solidity<a class="zola-anchor" href="#ink-vs-solidity" aria-label="Anchor link for: ink-vs-solidity">§</a>
+</h2>
+<h4 id="solidity">Solidity<a class="zola-anchor" href="#solidity" aria-label="Anchor link for: solidity">§</a>
+</h4>
+<p>Solidity is the code behind Ethereum — one of the largest blockchain platforms in the world. Computer scientist Dr. Gavin Wood originally came up with the concept of the Solidity language in August 2014.</p>
+<p>Solidity is an object-oriented, high-level language for implementing smart contracts. Solidity was influenced by C++, Python, and JavaScript and is designed to target the Ethereum Virtual Machine (EVM). It is a statically typed scripting language that does the process of verifying and enforcing the constraints at compile-time as opposed to run-time.</p>
+<p><em>Pros of Solidity</em></p>
+<ul>
+<li>Solidity provides inheritance properties in contracts including multiple-level inheritance properties.</li>
+<li>Can arguably be easier to learn in comparison to an eDSL (embedded domain-specific language) like ink! because of Solidity's similarity to other more commonly used high-level languages.</li>
+<li>Multiple type-safe functions are also supported in Solidity through facilitating ABI(Application Binary Interface).</li>
+<li>Widely used as the smart contract programming language of choice when working within the Ethereum blockchain as it's custom made to work with the Ethereum blockchain. This means much more support from a much larger community that has had time to work through bugs and provide a more user-friendly/dev-friendly environment.</li>
+</ul>
+<h4 id="ink">ink!<a class="zola-anchor" href="#ink" aria-label="Anchor link for: ink">§</a>
+</h4>
+<p><code>ink!</code> is a Rust-based embedded domain-specific language (eDSL) for writing WebAssembly smart contracts specifically for the FRAME Contracts pallet created by Parity Technologies. Also founded by Dr. Gavin Wood, Parity has developed Substrate, a framework for building blockchains, and Polkadot, the next-generation platform for connecting independent blockchains. </p>
+<p>The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. The smart contracts platform Edgeware, a self-governing blockchain built on top of substrate is planning on bonding with the Polkadot network using <code>ink!</code>. </p>
+<p><code>ink!</code> provides the most flexibility for new and veteran developers because it chooses not to invent a new programming language, but rather adapt a subset of Rust by simply adding some attribute tags in the form of <code>#[ink(…)]</code> to do the magic. </p>
+<p>Rust is a fantastic language that is very well-tailored to blockchain use-cases specifically. Many of the constraints you get on the blockchain are identical to those found in high-reliability embedded systems — small code size, excellent security, high reliability, and minimal resource use.</p>
+<p><em>Pros of Rust</em></p>
+<ul>
+<li><strong>Rust ecosystem</strong>: You gain from all of support available to the Rust ecosystem for free. As the language develops, ink! will automatically gain access to new features and functionality, improving how you can write smart contracts in the future.</li>
+<li><strong>Rust is an ideal smart contract language</strong>: It is type safe, memory safe, and free of undefined behaviors. It generates small binaries because it doesn't include extra bloat, like a garbage collector, and advanced optimizations and tree shaking remove dead code. Through compiler flags, Rust can automatically protect against integer overflow.</li>
+<li><strong>No overhead</strong>: minimal runtime.</li>
+<li><strong>1st class Wasm</strong>: Rust provides the first class support for WebAssembly.</li>
+<li><strong>Tooling</strong>: Because ink! follows Rust standards, tools like rustfmt, clippy and rust-analyzer already work out of the box. Also, Rust has an integrated test and benchmark runner.</li>
+<li><strong>Small Size</strong>: In the space-constrained blockchain world, size is important. The Rust compiler is a great help since it reorders struct fields to make each type as small as possible. Thus Rust data structures are very compact, in many cases even more compact than in C.</li>
+</ul>
+<p><em>Snapshot Comparison</em></p>
+<img src="https://ethan1sung.oss-cn-hangzhou.aliyuncs.com/ink-vs-solidity.jpg">
+
+
+        
+    
+
+        
+        
+    </article></div>
+    <div class="pagination">
+        <div class="pagination__buttons">
+            </div>
+    </div>
+<footer class="footer">
+                    <div class="footer__inner"><div class="copyright">
+            <span>© 2022 <a href="https://github.com/ejmg/zerm">zerm</a> :: Powered by <a href="https://www.getzola.org/">Zola</a></span>
+            <span>:: Theme made by <a href="https://github.com/ejmg">ejmg</a></span>
+        </div>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+</div>
+                    
+
+                </footer></div>
+    </body>
+</html>

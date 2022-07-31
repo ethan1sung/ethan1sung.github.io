@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>ethansung</title>
+	<subtitle>Blog Pages</subtitle>
+	<link href="/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-07-28T00:00:00+00:00</updated>
+	<id>/atom.xml</id>
+	<entry xml:lang="en">
+		<title>ink!</title>
+		<published>2022-07-28T00:00:00+00:00</published>
+		<updated>2022-07-28T00:00:00+00:00</updated>
+		<link rel="alternate" href="/blockchain/ink/" type="text/html"/>
+		<id>/blockchain/ink/</id>
+		<content type="html">&lt;p&gt;Honestly, I am new to blockchain. From my point of view, Solidity language is shit, and  I don&#x27;t know why Gravin Wood designed Solidity like that. Even if you are an experienced programmer, you need a lot of time to get familiar with Solidity. But it&#x27;s easy to write contracts with &lt;code&gt;ink!&lt;&#x2F;code&gt; if you are a rust programmer.&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;pre data-lang=&quot;solidity&quot; class=&quot;language-solidity &quot;&gt;&lt;code class=&quot;language-solidity&quot; data-lang=&quot;solidity&quot;&gt;pragma solidity ^0.4.22;
+
+contract helloworld {
+    function helloworld() public pure returns (string) {
+        return &amp;#x27;helloWorld&amp;#x27;;
+    }
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I don&#x27;t know why we put the &lt;code&gt;public&lt;&#x2F;code&gt; keyword at the back other than every other language does.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-ink&quot;&gt;What is &lt;code&gt;ink!&lt;&#x2F;code&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#what-is-ink&quot; aria-label=&quot;Anchor link for: what-is-ink&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;ink!&lt;&#x2F;code&gt; is a programming language invented by Parity for building blockchain contracts like Solidity does.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-s-ink-work&quot;&gt;How&#x27;s &lt;code&gt;ink!&lt;&#x2F;code&gt; work?&lt;a class=&quot;zola-anchor&quot; href=&quot;#how-s-ink-work&quot; aria-label=&quot;Anchor link for: how-s-ink-work&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As we know, contracts are on-chain logic, they cannot run on a standard OS, so we need a virtual machine to interpret the compiled code. So does &lt;code&gt;ink!&lt;&#x2F;code&gt;. The contracts written by &lt;code&gt;ink!&lt;&#x2F;code&gt; will be compiled into WASM. In substrate runtime, the pallet called &lt;code&gt;contracts&lt;&#x2F;code&gt; will run the WASM code.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ink-vs-solidity&quot;&gt;&lt;code&gt;ink!&lt;&#x2F;code&gt; vs Solidity&lt;a class=&quot;zola-anchor&quot; href=&quot;#ink-vs-solidity&quot; aria-label=&quot;Anchor link for: ink-vs-solidity&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h4 id=&quot;solidity&quot;&gt;Solidity&lt;a class=&quot;zola-anchor&quot; href=&quot;#solidity&quot; aria-label=&quot;Anchor link for: solidity&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h4&gt;
+&lt;p&gt;Solidity is the code behind Ethereum — one of the largest blockchain platforms in the world. Computer scientist Dr. Gavin Wood originally came up with the concept of the Solidity language in August 2014.&lt;&#x2F;p&gt;
+&lt;p&gt;Solidity is an object-oriented, high-level language for implementing smart contracts. Solidity was influenced by C++, Python, and JavaScript and is designed to target the Ethereum Virtual Machine (EVM). It is a statically typed scripting language that does the process of verifying and enforcing the constraints at compile-time as opposed to run-time.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Pros of Solidity&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Solidity provides inheritance properties in contracts including multiple-level inheritance properties.&lt;&#x2F;li&gt;
+&lt;li&gt;Can arguably be easier to learn in comparison to an eDSL (embedded domain-specific language) like ink! because of Solidity&#x27;s similarity to other more commonly used high-level languages.&lt;&#x2F;li&gt;
+&lt;li&gt;Multiple type-safe functions are also supported in Solidity through facilitating ABI(Application Binary Interface).&lt;&#x2F;li&gt;
+&lt;li&gt;Widely used as the smart contract programming language of choice when working within the Ethereum blockchain as it&#x27;s custom made to work with the Ethereum blockchain. This means much more support from a much larger community that has had time to work through bugs and provide a more user-friendly&#x2F;dev-friendly environment.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;ink&quot;&gt;ink!&lt;a class=&quot;zola-anchor&quot; href=&quot;#ink&quot; aria-label=&quot;Anchor link for: ink&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;code&gt;ink!&lt;&#x2F;code&gt; is a Rust-based embedded domain-specific language (eDSL) for writing WebAssembly smart contracts specifically for the FRAME Contracts pallet created by Parity Technologies. Also founded by Dr. Gavin Wood, Parity has developed Substrate, a framework for building blockchains, and Polkadot, the next-generation platform for connecting independent blockchains. &lt;&#x2F;p&gt;
+&lt;p&gt;The Polkadot Relay Chain will not support smart contracts natively. However, parachains on Polkadot will support smart contracts. The smart contracts platform Edgeware, a self-governing blockchain built on top of substrate is planning on bonding with the Polkadot network using &lt;code&gt;ink!&lt;&#x2F;code&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;ink!&lt;&#x2F;code&gt; provides the most flexibility for new and veteran developers because it chooses not to invent a new programming language, but rather adapt a subset of Rust by simply adding some attribute tags in the form of &lt;code&gt;#[ink(…)]&lt;&#x2F;code&gt; to do the magic. &lt;&#x2F;p&gt;
+&lt;p&gt;Rust is a fantastic language that is very well-tailored to blockchain use-cases specifically. Many of the constraints you get on the blockchain are identical to those found in high-reliability embedded systems — small code size, excellent security, high reliability, and minimal resource use.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Pros of Rust&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rust ecosystem&lt;&#x2F;strong&gt;: You gain from all of support available to the Rust ecosystem for free. As the language develops, ink! will automatically gain access to new features and functionality, improving how you can write smart contracts in the future.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rust is an ideal smart contract language&lt;&#x2F;strong&gt;: It is type safe, memory safe, and free of undefined behaviors. It generates small binaries because it doesn&#x27;t include extra bloat, like a garbage collector, and advanced optimizations and tree shaking remove dead code. Through compiler flags, Rust can automatically protect against integer overflow.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;No overhead&lt;&#x2F;strong&gt;: minimal runtime.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;1st class Wasm&lt;&#x2F;strong&gt;: Rust provides the first class support for WebAssembly.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tooling&lt;&#x2F;strong&gt;: Because ink! follows Rust standards, tools like rustfmt, clippy and rust-analyzer already work out of the box. Also, Rust has an integrated test and benchmark runner.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Small Size&lt;&#x2F;strong&gt;: In the space-constrained blockchain world, size is important. The Rust compiler is a great help since it reorders struct fields to make each type as small as possible. Thus Rust data structures are very compact, in many cases even more compact than in C.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;em&gt;Snapshot Comparison&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;ethan1sung.oss-cn-hangzhou.aliyuncs.com&#x2F;ink-vs-solidity.jpg&quot;&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Cryptocurrency Wallet and Mnemonic Words</title>
+		<published>2022-07-26T00:00:00+00:00</published>
+		<updated>2022-07-26T00:00:00+00:00</updated>
+		<link rel="alternate" href="/blockchain/cryptocurrency-wallets-and-mnemonic-words/" type="text/html"/>
+		<id>/blockchain/cryptocurrency-wallets-and-mnemonic-words/</id>
+		<content type="html">&lt;h2 id=&quot;cryptocurrency-address&quot;&gt;Cryptocurrency address&lt;a class=&quot;zola-anchor&quot; href=&quot;#cryptocurrency-address&quot; aria-label=&quot;Anchor link for: cryptocurrency-address&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;If you want to buy some coins in any public blockchain network or cryptocurrency exchange, you need an address which should be a hex string.&lt;&#x2F;p&gt;
+&lt;p&gt;Blockchain networks are anonymous, and our addresses are exposed on the web; anybody can see and trace them. So, when we try to deposit coins from a blockchain address, how does the blockchain network know the user is the owner of the address? The answer is that the blockchain network will check the transaction signature signed by the user with his private key.&lt;&#x2F;p&gt;
+&lt;p&gt;That&#x27;s it. We have a key pair, a private key, and a public key. The blockchain address is like a public key. So any user who has the corresponding private key can deposit coins from the address.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wallet&quot;&gt;Wallet&lt;a class=&quot;zola-anchor&quot; href=&quot;#wallet&quot; aria-label=&quot;Anchor link for: wallet&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;The address is a kind of hex string that looks like the following:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;text&quot; class=&quot;language-text &quot;&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;0xf24FF3a9CF04c71Dbc94D0b566f7A27B94566cac
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We need to keep the address string in our minds or write it on paper and type them in when we need it. That&#x27;s not user-friendly, so we need a wallet like &lt;code&gt;metamask&lt;&#x2F;code&gt; to help us do the work.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;metamask&lt;&#x2F;code&gt; will store our addresses in local storage. You may wonder if metamask uses our wallet to deposit coins, which won&#x27;t happen because wallet apps or extensions are all open sources and under surveillance.&lt;&#x2F;p&gt;
+&lt;p&gt;When you uninstall the wallet app, the app will delete your addresses from local storage, and if you want to use them again, you need to recover them from your mind or a paper. If you forget or lose the document, you lose your addresses and coins.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;hierarchical-deterministic-wallet&quot;&gt;Hierarchical deterministic wallet&lt;a class=&quot;zola-anchor&quot; href=&quot;#hierarchical-deterministic-wallet&quot; aria-label=&quot;Anchor link for: hierarchical-deterministic-wallet&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;If we have lots of addresses(key pairs), that&#x27;s hard to manage them.&lt;&#x2F;p&gt;
+&lt;p&gt;Hierarchical deterministic wallets(or shortly HD wallets) bring the possibility of deriving all the addresses (public and private key pairs) from a &lt;strong&gt;single&lt;&#x2F;strong&gt; recovery &lt;code&gt;seed&lt;&#x2F;code&gt;. This means an HD wallet needs only one backup.&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;ethan1sung.oss-cn-hangzhou.aliyuncs.com&#x2F;Derivation.png&quot;&gt;
+&lt;p&gt;The advantages of hierarchical deterministic wallets over standard cryptocurrency wallets are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easy backups - if you control the recovery seed, you can generate the entire tree of children&#x27;s keys (public&#x2F;private key pairs).&lt;&#x2F;li&gt;
+&lt;li&gt;Storing your private keys offline - possible to derive the entire tree of public keys (addresses) from a parent public key without needing any private keys.&lt;&#x2F;li&gt;
+&lt;li&gt;Access controls - Hierarchical deterministic wallets are arranged in a tree formation. The owner of the master seed controls all assets in the wallet and can create whole branches of keypairs if he or she wants to let someone spend only part of the coins in the wallet.&lt;&#x2F;li&gt;
+&lt;li&gt;Accounting - The owner of the master seed can create public keys at any level of a wallet tree formation to let someone access the transaction history of a specific part of the wallet.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;mnmemonic-words&quot;&gt;Mnmemonic words&lt;a class=&quot;zola-anchor&quot; href=&quot;#mnmemonic-words&quot; aria-label=&quot;Anchor link for: mnmemonic-words&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;A recovery seed is represented in hex string, and it&#x27;s difficult to type it in. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;blob&#x2F;master&#x2F;bip-0039.mediawiki&quot;&gt;BIP-39&lt;&#x2F;a&gt; proposed a method mapping a binary seed into memorizable words. We have carefully chosen &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;bitcoin&#x2F;bips&#x2F;blob&#x2F;master&#x2F;bip-0039&#x2F;english.txt&quot;&gt;words&lt;&#x2F;a&gt; to finish the mapping.&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;ethan1sung.oss-cn-hangzhou.aliyuncs.com&#x2F;seed-to-words.webp&quot;&gt;
+&lt;p&gt;When recovering, it will map mnemonic words back into binary seed. Then we use the binary seed to derive our key pairs.&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&#x2F;&#x2F;ethan1sung.oss-cn-hangzhou.aliyuncs.com&#x2F;mnemonic-to-seed.webp&quot;&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;a class=&quot;zola-anchor&quot; href=&quot;#references&quot; aria-label=&quot;Anchor link for: references&quot;&gt;§&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;wiki.trezor.io&#x2F;Cryptocurrency_standards#Hierarchical_deterministic_wallets&quot;&gt;Hierarchical deterministic wallets&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;</content>
+	</entry>
+</feed>

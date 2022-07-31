@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Cryptocurrency Wallet and Mnemonic Words - ethansung</title>
+    
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><meta name="description" content="Blog Pages Cryptocurrency Wallet and Mnemonic Words Mnemonic is an exciting innovation that helps blockchain users recover their wallets quickly. Let&#x27;s check it out. This article will discuss blockchain wallets and how the mnemonic words work."/><meta name="keywords" content="cryptocurrency, mnemonic, wallet" />
+    <meta property="og:title" content="ethansung -&nbsp;Cryptocurrency Wallet and Mnemonic Words" />
+    <meta property="og:type" content="website"/><meta property="og:url" content="&#x2F;blockchain&#x2F;cryptocurrency-wallets-and-mnemonic-words&#x2F;"/><meta property="og:description" content="Mnemonic is an exciting innovation that helps blockchain users recover their wallets quickly. Let&#x27;s check it out. This article will discuss blockchain wallets and how the mnemonic words work."/>
+    <link rel="preload" href="/assets/fonts/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/style.css?h=f8c7bc50801cb0dd9da65fd930c01ca7fb7efd801345957f21cba38c367faec8">
+    <link rel="stylesheet" href=" /color/orange.css?h=aee32970acd19d5cf88d42505796de4e31aa73fc58a07e61aa2f57fae305de50">
+    
+<link rel="alternate" type="application/atom+xml" title="ethansung RSS" href="/atom.xml"></head>
+    <body>
+        <div class="container center">
+<header class="header">
+    <div class="header__inner">
+        <div class="header__logo">
+            <a href="&#x2F;">
+    <div class="logo">
+        ethansung
+    </div>
+</a>
+        </div>
+        <div class="menu-trigger">menu</div>
+    </div>
+    
+    <nav class="menu">
+        <ul class="menu__inner menu__inner--desktop">
+            
+            
+                    <li>
+                        <a href="
+    
+        /about
+    
+">about</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        /contact
+    
+">contact</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        /tags
+    
+">tags</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        https:&#x2F;&#x2F;github.com&#x2F;ethan1sung
+    
+">github</a>
+                    </li>
+                
+                    <li>
+                        <a href="
+    
+        https:&#x2F;&#x2F;leetcode.com&#x2F;ethansung&#x2F;
+    
+">leetcode</a>
+                    </li>
+                
+            </ul>
+
+        <ul class="menu__inner menu__inner--mobile">
+            
+        <li>
+            <a href="
+    
+        /about
+    
+">about</a>
+        </li>
+        <li>
+            <a href="
+    
+        /contact
+    
+">contact</a>
+        </li>
+        <li>
+            <a href="
+    
+        /tags
+    
+">tags</a>
+        </li>
+        <li>
+            <a href="
+    
+        https:&#x2F;&#x2F;github.com&#x2F;ethan1sung
+    
+">github</a>
+        </li>
+        <li>
+            <a href="
+    
+        https:&#x2F;&#x2F;leetcode.com&#x2F;ethansung&#x2F;
+    
+">leetcode</a>
+        </li>
+        </ul>
+    </nav>
+
+    </header>
+<div class="content"><article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="&#x2F;blockchain&#x2F;cryptocurrency-wallets-and-mnemonic-words&#x2F;">Cryptocurrency Wallet and Mnemonic Words</a>
+            </h1>
+            
+    <div class="post-meta">
+        <span class="post-date">2022.0726
+                </span>
+
+        <span class="post-author"></span>
+
+        
+
+    
+   :
+    #<a href="/tags/cryptocurrency/">cryptocurrency</a>
+        
+    #<a href="/tags/mnemonic/">mnemonic</a>
+        
+    #<a href="/tags/wallet/">wallet</a>
+        
+    
+            
+        
+    </div>
+
+            
+    
+</header><h2 id="cryptocurrency-address">Cryptocurrency address<a class="zola-anchor" href="#cryptocurrency-address" aria-label="Anchor link for: cryptocurrency-address">§</a>
+</h2>
+<p>If you want to buy some coins in any public blockchain network or cryptocurrency exchange, you need an address which should be a hex string.</p>
+<p>Blockchain networks are anonymous, and our addresses are exposed on the web; anybody can see and trace them. So, when we try to deposit coins from a blockchain address, how does the blockchain network know the user is the owner of the address? The answer is that the blockchain network will check the transaction signature signed by the user with his private key.</p>
+<p>That's it. We have a key pair, a private key, and a public key. The blockchain address is like a public key. So any user who has the corresponding private key can deposit coins from the address.</p>
+<h2 id="wallet">Wallet<a class="zola-anchor" href="#wallet" aria-label="Anchor link for: wallet">§</a>
+</h2>
+<p>The address is a kind of hex string that looks like the following:</p>
+<pre data-lang="text" class="language-text "><code class="language-text" data-lang="text">0xf24FF3a9CF04c71Dbc94D0b566f7A27B94566cac
+</code></pre>
+<p>We need to keep the address string in our minds or write it on paper and type them in when we need it. That's not user-friendly, so we need a wallet like <code>metamask</code> to help us do the work.</p>
+<p><code>metamask</code> will store our addresses in local storage. You may wonder if metamask uses our wallet to deposit coins, which won't happen because wallet apps or extensions are all open sources and under surveillance.</p>
+<p>When you uninstall the wallet app, the app will delete your addresses from local storage, and if you want to use them again, you need to recover them from your mind or a paper. If you forget or lose the document, you lose your addresses and coins.</p>
+<h2 id="hierarchical-deterministic-wallet">Hierarchical deterministic wallet<a class="zola-anchor" href="#hierarchical-deterministic-wallet" aria-label="Anchor link for: hierarchical-deterministic-wallet">§</a>
+</h2>
+<p>If we have lots of addresses(key pairs), that's hard to manage them.</p>
+<p>Hierarchical deterministic wallets(or shortly HD wallets) bring the possibility of deriving all the addresses (public and private key pairs) from a <strong>single</strong> recovery <code>seed</code>. This means an HD wallet needs only one backup.</p>
+<img src="https://ethan1sung.oss-cn-hangzhou.aliyuncs.com/Derivation.png">
+<p>The advantages of hierarchical deterministic wallets over standard cryptocurrency wallets are:</p>
+<ul>
+<li>Easy backups - if you control the recovery seed, you can generate the entire tree of children's keys (public/private key pairs).</li>
+<li>Storing your private keys offline - possible to derive the entire tree of public keys (addresses) from a parent public key without needing any private keys.</li>
+<li>Access controls - Hierarchical deterministic wallets are arranged in a tree formation. The owner of the master seed controls all assets in the wallet and can create whole branches of keypairs if he or she wants to let someone spend only part of the coins in the wallet.</li>
+<li>Accounting - The owner of the master seed can create public keys at any level of a wallet tree formation to let someone access the transaction history of a specific part of the wallet.</li>
+</ul>
+<h2 id="mnmemonic-words">Mnmemonic words<a class="zola-anchor" href="#mnmemonic-words" aria-label="Anchor link for: mnmemonic-words">§</a>
+</h2>
+<p>A recovery seed is represented in hex string, and it's difficult to type it in. <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a> proposed a method mapping a binary seed into memorizable words. We have carefully chosen <a href="https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt">words</a> to finish the mapping.</p>
+<img src="https://ethan1sung.oss-cn-hangzhou.aliyuncs.com/seed-to-words.webp">
+<p>When recovering, it will map mnemonic words back into binary seed. Then we use the binary seed to derive our key pairs.</p>
+<img src="https://ethan1sung.oss-cn-hangzhou.aliyuncs.com/mnemonic-to-seed.webp">
+<h2 id="references">References<a class="zola-anchor" href="#references" aria-label="Anchor link for: references">§</a>
+</h2>
+<ul>
+<li><a href="https://wiki.trezor.io/Cryptocurrency_standards#Hierarchical_deterministic_wallets">Hierarchical deterministic wallets</a></li>
+</ul>
+<span id="continue-reading"></span>
+
+        
+    
+
+        
+        
+    </article></div>
+    <div class="pagination">
+        <div class="pagination__buttons">
+            </div>
+    </div>
+<footer class="footer">
+                    <div class="footer__inner"><div class="copyright">
+            <span>© 2022 <a href="https://github.com/ejmg/zerm">zerm</a> :: Powered by <a href="https://www.getzola.org/">Zola</a></span>
+            <span>:: Theme made by <a href="https://github.com/ejmg">ejmg</a></span>
+        </div>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+</div>
+                    
+
+                </footer></div>
+    </body>
+</html>
